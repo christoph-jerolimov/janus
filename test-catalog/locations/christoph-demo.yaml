@@ -6,6 +6,7 @@ spec:
   targets:
     - ../groups/janus-authors.yaml
     - ../users/cjerolim.yaml
+    - ../users/jerolimov.yaml
     - ../systems/christoph-demo-system.yaml
     - ../components/backstage-showcase.yaml
     - ../components/christoph-demo1-service.yaml
