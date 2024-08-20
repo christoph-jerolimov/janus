@@ -1,6 +1,9 @@
 #!/bin/bash
 
-oc create serviceaccount janus-idp-reader
+namespace="default"
+serviceaccount="janus-idp-reader"
+
+oc create -n "$namespace" serviceaccount "$serviceaccount"
 
 # kubernetes core
 oc create clusterrole janus-idp-kubernetes-core-reader \
@@ -23,8 +26,8 @@ oc create clusterrole janus-idp-kubernetes-core-reader \
 
 # kubernetes metrics
 oc create clusterrole janus-idp-kubernetes-metrics-reader \
-    --verb=get,watch,list \
-    --resource=pods.metrics.k8s.io
+   --verb=get,watch,list \
+   --resource=pods.metrics.k8s.io
 
 # openshift imagestreams
 oc create clusterrole janus-idp-openshift-imagestream-reader \
@@ -40,7 +43,13 @@ oc create clusterrole janus-idp-tekton-reader \
     --resource=pipelines.tekton.dev \
     --resource=pipelineruns.tekton.dev
 
-oc adm policy add-cluster-role-to-user janus-idp-kubernetes-core-reader -z janus-idp-reader
-oc adm policy add-cluster-role-to-user janus-idp-kubernetes-metrics-reader -z janus-idp-reader
-oc adm policy add-cluster-role-to-user janus-idp-openshift-imagestream-reader -z janus-idp-reader
-oc adm policy add-cluster-role-to-user janus-idp-tekton-reader -z janus-idp-reader
+# kubevirt
+oc create clusterrole janus-idp-kubevirt-reader \
+    --verb=get,watch,list \
+    --resource=virtualmachines.kubevirt.io
+
+oc adm policy add-cluster-role-to-user janus-idp-kubernetes-core-reader -n "$namespace" -z "$serviceaccount"
+oc adm policy add-cluster-role-to-user janus-idp-kubernetes-metrics-reader -n "$namespace" -z "$serviceaccount"
+oc adm policy add-cluster-role-to-user janus-idp-openshift-imagestream-reader -n "$namespace" -z "$serviceaccount"
+oc adm policy add-cluster-role-to-user janus-idp-tekton-reader -n "$namespace" -z "$serviceaccount"
+oc adm policy add-cluster-role-to-user janus-idp-kubevirt-reader -n "$namespace" -z "$serviceaccount"

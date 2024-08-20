@@ -1,3 +1,6 @@
 #!/bin/bash
 
-oc create token --duration=168h janus-idp-reader
+namespace="default"
+serviceaccount="janus-idp-reader"
+
+oc create -n "$namespace" token --duration=168h "$serviceaccount"
