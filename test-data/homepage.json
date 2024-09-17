@@ -1,7 +1,7 @@
 [
   {
     "title": "Backstage",
-    "isExpanded": false,
+    "isExpanded": true,
     "links": [
       {
         "label": "Website",
@@ -22,7 +22,7 @@
   },
   {
     "title": "Red Hat Developer Hub",
-    "isExpanded": false,
+    "isExpanded": true,
     "links": [
       {
         "label": "Website",
