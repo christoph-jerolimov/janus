@@ -5,6 +5,7 @@ metadata:
 spec:
   targets:
     - ./groups/janus-authors.yaml
+    - ./users/christoph-jerolimov.yaml
     - ./users/cjerolim.yaml
     - ./users/jerolimov.yaml
     - ./systems/christoph-demo-system.yaml
