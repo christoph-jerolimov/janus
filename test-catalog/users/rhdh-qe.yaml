@@ -6,3 +6,4 @@ metadata:
 spec:
   profile:
     displayName: RHDH QE # shown on the detail page
+  memberOf: [janus-authors]
