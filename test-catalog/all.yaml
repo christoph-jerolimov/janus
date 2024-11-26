@@ -8,6 +8,7 @@ spec:
     - ./users/christoph-jerolimov.yaml
     - ./users/cjerolim.yaml
     - ./users/jerolimov.yaml
+    - ./users/rhdh-qe.yaml
     - ./systems/christoph-demo-system.yaml
     - ./components/backstage-showcase.yaml
     - ./components/christoph-demo1-service.yaml

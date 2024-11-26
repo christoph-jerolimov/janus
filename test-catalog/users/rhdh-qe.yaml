@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: rhdh-qe
+  title: RHDH QE # shown in the table
+spec:
+  profile:
+    displayName: RHDH QE # shown on the detail page
