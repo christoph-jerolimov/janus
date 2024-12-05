@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  name: jerolimov
-  title: Christoph Jerolimov # shown in the table
-spec:
-  profile:
-    displayName: Christoph Jerolimov (GitHub) # shown on the detail page
-  memberOf: [janus-authors]

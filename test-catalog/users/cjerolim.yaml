@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   name: cjerolim
-  title: Christoph Jerolimov # shown in the table
+  title: Christoph Jerolimov (SSO) # shown in the table
 spec:
   profile:
     displayName: Christoph Jerolimov (SSO) # shown on the detail page

@@ -6,9 +6,15 @@ spec:
   targets:
     - ./groups/janus-authors.yaml
     - ./users/christoph-jerolimov.yaml
+    - ./users/ciiay.yaml
     - ./users/cjerolim.yaml
-    - ./users/jerolimov.yaml
+    - ./users/debsmita1.yaml
+    - ./users/divyanshiGupta.yaml
+    - ./users/invincibleJai.yaml
+    - ./users/its-mitesh-kumar.yaml
     - ./users/rhdh-qe.yaml
+    - ./users/ShiranHi.yaml
+    - ./users/teknaS47.yaml
     - ./systems/christoph-demo-system.yaml
     - ./components/backstage-showcase.yaml
     - ./components/christoph-demo1-service.yaml
